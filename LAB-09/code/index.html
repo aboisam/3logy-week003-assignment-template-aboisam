@@ -1,0 +1,196 @@
+  <!-- 
+    HEADER: Top of page
+    Contains site branding and main navigation
+  -->
+  <header>
+    <h1>Aboi Samson Aboi </h1>
+    <p> Hi! I'm Aboi Samson Aboi, a career-changer passionate about solving problems with code. After 5 years in a system engineer role, I realized my love for technology and decided to pursue software development. I'm excited to build accessible, user-friendly applications that improve people's lives.</p>
+    
+    <!-- 
+      NAV: Navigation links
+      ul > li structure is semantic for lists
+    -->
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--
+    MAIN: Primary content area
+    Only ONE <main> per page!
+  -->
+  <main>
+    
+    <!-- 
+      SECTION: About Me
+      Thematic grouping of related content
+      ID allows anchor linking (#about)
+    -->
+    <section id="about">
+      <h2>About Me</h2>
+      <!-- 
+        IMG: Always include alt text for accessibility
+        Describe the image for screen reader users
+      -->
+      <img src="images/aboi.jpg" alt="Aboi Samson Aboi smiling in front of a computer"">
+      <p>
+        Hi! I'm Aboi Samson Aboi, a passionate web developer learning full-stack 
+        development at DevHub Bootcamp. I love solving problems with code 
+        and building solutions that help people.
+      </p>
+      <p>
+        My background is in system engineering, but I decided to pursue my dream 
+        of becoming a software developer. I'm excited about creating 
+        modern, accessible web applications.
+      </p>
+    </section>
+
+    <!-- 
+      SECTION: Projects
+      Another thematic grouping
+    -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      
+      <!-- 
+        ARTICLE: Self-contained content
+        Could be distributed independently
+        Perfect for blog posts, project cards
+      -->
+      <article>
+        <!-- H3 because we're inside H2 section -->
+        <h3>Number Guessing Game</h3>
+        <p>
+          An interactive browser game built with vanilla JavaScript. 
+          Try to guess the secret number with helpful hints!
+        </p>
+        <ul>
+          <li>JavaScript ES6+ logic</li>
+          <li>DOM manipulation</li>
+          <li>User input validation</li>
+        </ul>
+        <a href="https://www.funbrain.com/games/guess-the-number">View Project</a>
+      </article>
+
+      <article>
+        <h3>Task Manager App</h3>
+        <p>
+          A productivity application to organize daily tasks with 
+          categories, due dates, and priority levels.
+        </p>
+        <ul>
+          <li>LocalStorage persistence</li>
+          <li>Responsive design</li>
+          <li>Filter and sort features</li>
+        </ul>
+        <a href="http://taskmanager.com/">View Project</a>
+      </article>
+
+      <article>
+        <h3>Weather Dashboard</h3>
+        <p>
+          Real-time weather application using OpenWeather API. 
+          Search any city to see current conditions and forecast.
+        </p>
+        <ul>
+          <li>API integration</li>
+          <li>Asynchronous JavaScript</li>
+          <li>Dynamic UI updates</li>
+        </ul>
+        <a href="http://taskmanager.com/">View Project</a>
+      </article>
+    </section>
+
+    <!-- 
+      SECTION: Contact Form
+      Demonstrates accessible form structure
+    -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Let's build something amazing together! Send me a message.</p>
+      
+      <!-- 
+        FORM: Interactive user input
+        action="/submit" (where form data goes)
+        method="POST" (how data is sent)
+      -->
+      <form action="/submit" method="POST">
+        
+        <!-- 
+          LABEL + INPUT pattern:
+          - 'for' attribute MUST match input 'id'
+          - Clicking label focuses input (accessibility)
+          - Screen readers announce label when focused
+        -->
+        <label for="name">Your Name:</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="aboi samson aboi"
+          required
+        >
+        
+        <label for="email">Your Email:</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="aboi@gmail.com"
+          required
+        >
+        <!-- 
+          type="email" provides:
+          - Browser validation (checks for @)
+          - Mobile keyboard shows @ symbol
+        -->
+        
+        <label for="message">Message:</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="5" 
+          placeholder="Tell me about your project..."
+          required
+        ></textarea>
+        
+        <!-- 
+          BUTTON: type="submit" triggers form submission
+          required attribute makes field mandatory
+        -->
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- 
+    FOOTER: Bottom of page
+    Typically contains copyright, links, contact info
+  -->
+  <footer>
+    <p>&copy; 2026 Aboi Samson Aboi. All rights reserved.</p>
+    
+    <!-- 
+      Second NAV: Social media links
+      aria-label distinguishes from main nav
+      Helps screen reader users understand context
+    -->
+    <nav aria-label="Social Media">
+      <a href="https://github.com/aboisam" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/aboisam" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter.com/aboisam" target="_blank" rel="noopener">Twitter</a>
+      <a href="mailto:aboi@gmail.com">Email</a>
+    </nav>
+    <!-- 
+      target="_blank" opens in new tab
+      rel="noopener" is security best practice
+    -->
+  </footer>
+
+</body>
+</html>
